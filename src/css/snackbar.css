@@ -1,0 +1,131 @@
+/*
+* START Toast style change
+*/
+.iziToast>.iziToast-body .iziToast-message,
+.iziToast>.iziToast-body .iziToast-title {
+    font-family: "Montserrat",
+        sans-serif;
+}
+
+/*
+* END - Toast style change
+*/
+
+.form {
+    width: 360px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 156px;
+}
+
+.delay-label {
+    font-family: "Montserrat",
+        sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+.count-input {
+    border: 1px solid #808080;
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+
+    margin-bottom: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+}
+
+.count-input:hover {
+    border: 1px solid #000;
+}
+
+
+.fieldset-state {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 24px;
+    margin-left: 0;
+
+    border-radius: 4px;
+    stroke-width: 1px;
+    stroke: #808080;
+}
+
+.fieldset-state:hover {
+    border: 1px solid #000;
+}
+
+.fieldset-state:has(input[type="radio"]:checked) {
+    border: 1px solid #000;
+}
+
+.fieldset-legend {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+.fieldset-label {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+.fieldset-input {
+    border: 1px solid #757575;
+    border-radius: 14px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+}
+
+.fieldset-input:hover {
+    cursor: pointer;
+}
+
+.create-button {
+    border-radius: 8px;
+    border-style: none;
+    padding: 8px 16px;
+    width: 360px;
+    height: 40px;
+    background-color: #4e75ff;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.create-button:hover {
+    background-color: #6c8cff;
+}
