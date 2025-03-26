@@ -1,3 +1,16 @@
+/*
+* Form apearence
+*/
+@import url('./form.css');
+
+/*
+* Gallery apearence
+*/
+@import url('./gallery.css');
+
+/*
+* Common styles
+*/
 body {
     font-family: sans-serif;
     color: #434455;
