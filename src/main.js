@@ -16,18 +16,12 @@ const loader = document.querySelector('.loader');
 form.addEventListener('submit', event => {
   event.preventDefault();
   const query = searchInp.value.trim();
-
-  if (query === '') {
-    alert('Будь ласка, введіть запит');
-    return;
-  }
-  loader.style.display = 'inline-block';
-  console.log('показуємо:', loader.style.display);
+  loader.style.display = 'inline-flex';
 
   fetchOnQuery(query)
     .then(data => {
-      console.log(data);
-      console.log('Приховуємо лоадер:', loader.style.display);
+      loader.style.display = 'none';
+
       renderImages(data.hits, gallery);
       new SimpleLightbox('.gallery a', {
         captionsData: 'alt',
@@ -35,9 +29,8 @@ form.addEventListener('submit', event => {
       });
     })
     .catch(error => {
-      console.error('Помилка запиту:', error);
-
-      console.log('Приховуємо лоадер:', loader.style.display);
+      loader.style.display = 'none';
+      gallery.innerHTML = '';
       iziToast.error({
         title: '',
         titleColor: '#FFFFFF',

@@ -24,7 +24,6 @@ export function renderImages(images, gallery) {
     link.appendChild(img);
     item.appendChild(link);
     item.appendChild(stats);
-
     gallery.appendChild(item);
   });
 }
