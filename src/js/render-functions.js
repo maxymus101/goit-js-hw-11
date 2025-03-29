@@ -1,5 +1,15 @@
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
+let lightbox;
+
 export function renderImages(images, gallery) {
-  gallery.innerHTML = '';
+  if (images.length === 0) {
+    gallery.innerHTML = '';
+    return;
+  }
+  const fragment = document.createDocumentFragment();
+
   images.forEach(hit => {
     const item = document.createElement('li');
     item.classList.add('gallery-item');
@@ -24,6 +34,21 @@ export function renderImages(images, gallery) {
     link.appendChild(img);
     item.appendChild(link);
     item.appendChild(stats);
-    gallery.appendChild(item);
+    fragment.appendChild(item);
   });
+  clearGallery(gallery);
+  gallery.appendChild(fragment);
+
+  if (lightbox) {
+    lightbox.refresh();
+  } else {
+    lightbox = new SimpleLightbox('.gallery a', {
+      captionsData: 'alt',
+      captionDelay: 250,
+    });
+  }
+}
+
+export function clearGallery(gallery) {
+  gallery.innerHTML = '';
 }
